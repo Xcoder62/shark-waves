@@ -1,0 +1,49 @@
+.discover-main-section {
+    display:flex;
+    align-items: center; /* if image stretchs, this is why */
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.discover-main-section .covers-image {
+    width: 30vw; /* read, 30% of screen width */
+    margin-left: 2rem; /*dont touch text on left layout */
+    height:auto; /* makes image always perfect square */
+    max-width: 350px;
+}
+
+.icon-section {
+    display: flex;
+}
+
+.icon {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    margin: .5rem; /* space between items */
+    padding:.75rem; /*background color 4 buttons.*/
+    width: 100px;
+    height:100px;
+    background-color: #202027;
+    margin-bottom: 2rem;
+}
+
+.icon img {
+    width:40px;
+}
+
+@media (max-width: 800px) {
+    .discover-main-section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .discover-main-section .covers-image {
+        margin-top: 2rem;
+        height: 30vh; /* switch from height auto to width auto 
+        when working with columns */
+        width: auto;
+    }
+}
+

@@ -1,0 +1,90 @@
+.home-main-section {
+    display: flex;
+    align-items: stretch; /*stretch to be full height of container*/
+    justify-content:space-between; /* fill in as much space btw the elements as possible*/
+    /* alternatively instead of flex-grow, set a height */
+    flex-grow:1; /* take as much space possible from left2right */
+    /*border: 1px rebeccapurple solid;*/
+}
+
+.home-main-section .img-wrapper {
+    flex-grow: 1;
+    flex-direction:column;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    /*border: 1px red solid;*/
+}
+
+.home-main-section .lady-image {
+    background-image: url(images/landing-page-girl.png);
+    flex-grow: 1; /* grows to full height of remaining section*/
+    max-height:70vh;
+    min-width: 30vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.home-main-section .call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+    align-self: center;
+    /*border: 1px green solid;*/
+}
+
+.home-page-circle-1 {
+    position: absolute;
+    width:25vw;
+    height:25vw;
+    border-radius:50%;
+    background-color:rgba(188, 58, 128,.15);
+    bottom:5vw; /*read as 5 percent of the screen away from the bottom*/
+    left: 5vw;
+    z-index: -1; /* puts behind the woman image */
+}
+
+.home-page-circle-2{
+    position: absolute;
+    width:25vw;
+    height:25vw;
+    border-radius:50%;
+    background-color:rgba(19, 91, 176,.15);
+    top:15vh; /*read as 5 percent of the screen away from the bottom*/
+    left: 30vw;
+    z-index: -1; /* puts behind the woman image */
+}
+
+.home-page-circle-3{
+    position: absolute;
+    overflow: hidden;
+    width:45vw;
+    height:45vw;
+    /*border-radius:50%; This is a recentangle with a circle inside it.*/
+    bottom:0; /*read as 5 percent of the screen away from the bottom*/
+    right: 0vw;
+    /*border: yellow solid 1px;*/
+    z-index: -1; /* puts behind the woman image */
+}
+
+.home-page-circle-3::before {
+    content:'';
+    transform: translate(40%, 40%); /* 40% to the right n down */
+    position:absolute;
+    height:100%; /* see parent (.home-page-circle-3 to see acutal values, 45vw) */
+    width:100%;
+    border-radius:50%;
+    background-color:rgba(19, 91, 176,.15);
+    
+}
+@media (max-width: 900px) {
+    .home-main-section .img-wrapper{
+        display:none;
+    }
+
+    .home-main-section {
+        justify-content: center;
+    }
+}

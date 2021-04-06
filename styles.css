@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* start with 1 html component 
+at a time, and add CSS as you go */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2F303A;
+    padding:0;
+    margin:0;
+    font-family: Poppins, sans-serif; 
+    font-size: 1.2rem; /*Root size is 16px by default, so this is 1.2 or 19.2px */
+    color: white;
+    min-height: 100vh;
+}
+
+.full-height-grow {
+    display:flex;
+    flex-direction: column;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em; /*19.2 x 1.25=  24px */
+    color: inherit;
+    text-decoration: none; /*removes underline*/
+}
+
+.brand-logo-name {
+    margin-left: 1rem; /* 16 px by default, maybe same as font? */
+}
+
+.main-nav ul, .footer-nav ul{
+    display:flex;
+    margin: 0;
+    padding: 0;
+    list-style: none; /* removes the dots from the ul elements */
+}
+
+.main-nav a, .footer-nav a{
+    color: inherit;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.main-nav a:hover, .footer-nav a:hover {
+    color: #adadad; /* Hover color, just slighter dark white*/
+}
+
+.main-header, .main-footer {
+    display: flex;
+    justify-content: space-between; /* see a tag and nav tag as two items*/
+    align-items: center; /*depedent on logo image for centering...*/
+    /* height: 140px; */
+}
+.main-header {
+    height: 140px;
+}
+
+.main-footer {
+    height:70px; /*this is the section color trick*/
+    background-color: #202027;
+    font-weight: bold;
+
+}
+
+.social-link img{
+    width: 1em; /* same size as text */
+    margin-right: .5rem;
+}
+
+.main-footer .container {
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* keeps header in center */
+    padding: 0 40px; /* keeps header items away from touching edges.*/
+    flex-grow: 1;
+    /*border:1px palegoldenrod solid;*/
+
+}
+
+.title {
+    font-weight: 500;
+    font-size: 3em; /* dependent on element size, h1 is 19px.*/
+    margin-bottom: 1rem;
+    margin-top:0;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    color: white;
+    background-color: #1762A7; /* from figma */
+    padding: .75rem 1.5rem; /* 1:2 ratio is good for buttons */
+    border-radius: .5rem; /*(16px/2 = 8px)*/
+    text-decoration: none;
+    font-size: .9rem;
+    outline:none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2180d8;
+}
+
+.btn:focus {
+    background-color: #2796ff;
+}
+
